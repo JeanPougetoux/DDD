@@ -1,7 +1,7 @@
 package vo;
 
 class CreneauException extends RuntimeException{
-    CreneauException(String s) {
-        super(s);
+    CreneauException(ExceptionMessages exceptionMessages) {
+        super(exceptionMessages.getMessage());
     }
 }

@@ -21,7 +21,7 @@ public class CreneauTest {
         try {
             Creneau creneau = new Creneau(new Date(), LocalTime.parse("13:03"), LocalTime.parse("11:37"));
         } catch(CreneauException e) {
-            assertEquals(e.getMessage(), "Start time should be before end time");
+            assertEquals(e.getMessage(), ExceptionMessages.ORDER.getMessage());
             throw e;
         }
     }
@@ -32,7 +32,7 @@ public class CreneauTest {
         try {
             Creneau creneau = new Creneau(new Date(), LocalTime.parse("11:03"), LocalTime.parse("11:17"));
         } catch(CreneauException e) {
-            assertEquals(e.getMessage(), "The creneau should last more than 30 minutes");
+            assertEquals(e.getMessage(), ExceptionMessages.DURATION_LIMIT.getMessage());
             throw e;
         }
     }

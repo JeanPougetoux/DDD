@@ -13,11 +13,11 @@ public class Creneau {
     Creneau(Date date, LocalTime start, LocalTime end) {
 
         if(start.isAfter(end)){
-            throw new CreneauException("Start time should be before end time");
+            throw new CreneauException(ExceptionMessages.ORDER);
         }
 
         if(Duration.between(start, end).toMinutes() < 30){
-            throw new CreneauException("The creneau should last more than 30 minutes");
+            throw new CreneauException(ExceptionMessages.DURATION_LIMIT);
         }
 
         this.date = date;
