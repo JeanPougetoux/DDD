@@ -1,5 +1,6 @@
 package vo;
 
+import java.time.Duration;
 import java.time.LocalTime;
 import java.util.Date;
 import java.util.Objects;
@@ -9,7 +10,16 @@ public class Creneau {
     private LocalTime start;
     private LocalTime end;
 
-    public Creneau(Date date, LocalTime start, LocalTime end) {
+    Creneau(Date date, LocalTime start, LocalTime end) {
+
+        if(start.isAfter(end)){
+            throw new CreneauException("Start time should be before end time");
+        }
+
+        if(Duration.between(start, end).toMinutes() < 30){
+            throw new CreneauException("The creneau should last more than 30 minutes");
+        }
+
         this.date = date;
         this.start = start;
         this.end = end;
