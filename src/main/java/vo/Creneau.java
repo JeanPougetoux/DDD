@@ -11,14 +11,14 @@ public class Creneau {
     private LocalTime end;
 
     Creneau(Date date, LocalTime start, LocalTime end) {
+        if(date == null || start == null || end == null)
+            throw new CreneauException(ExceptionMessages.NULL);
 
-        if(start.isAfter(end)){
+        if(start.isAfter(end))
             throw new CreneauException(ExceptionMessages.ORDER);
-        }
 
-        if(Duration.between(start, end).toMinutes() < 30){
+        if(Duration.between(start, end).toMinutes() < 30)
             throw new CreneauException(ExceptionMessages.DURATION_LIMIT);
-        }
 
         this.date = date;
         this.start = start;
