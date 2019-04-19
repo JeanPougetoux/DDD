@@ -1,8 +1,12 @@
 package model.entretien;
 
+import common.dto.CandidatDTO;
+import common.dto.RecruiterDTO;
 import common.exception.ExceptionMessages;
 import common.exception.InterviewException;
 import common.status.InterviewStatus;
+
+import java.util.ArrayList;
 
 public class Interview {
     private InterviewID id;
@@ -13,12 +17,16 @@ public class Interview {
 
     Interview(InterviewID id, Creneau creneau, Recruiter recruiter, Candidate candidate) {
 
-
         this.id = id;
         this.creneau = creneau;
         this.recruiter = recruiter;
         this.candidate = candidate;
         this.status = InterviewStatus.PLANIFIED;
+    }
+
+
+    Interview(CandidatDTO candidatDTO, ArrayList<RecruiterDTO> recruiterDTO) {
+        this.candidate = new Candidate(candidatDTO);
     }
 
     public InterviewID getId() {

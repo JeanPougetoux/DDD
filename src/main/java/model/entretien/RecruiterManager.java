@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 class RecruiterManager {
-    HashMap<Recruiter, ArrayList<Creneau>> base;
+    HashMap<Recruiter, ArrayList<Creneau>> schedule;
 
 
 }
