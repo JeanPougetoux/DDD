@@ -2,7 +2,7 @@ package exposition;
 
 public class ConfirmInterviewController {
 
-    public static void Execute(){
+    public static void execute(){
 
     }
 
