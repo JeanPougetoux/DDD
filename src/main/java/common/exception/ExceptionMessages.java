@@ -7,7 +7,9 @@ public enum ExceptionMessages {
     REPORT_WHEN_CANCELED("Can't report the interview when is already cancelled"),
     CONFIRM_WHEN_CONFIRM("Can't confirm the interview if it's already confirmed"),
     CONFIRM_WHEN_CANCELLED("Can't confirm the interview if it's already cancelled"),
-    CANCEL_WHEN_CANCELLED("Cant't cancel the interview if it's already cancelled");
+    CANCEL_WHEN_CANCELLED("Cant't cancel the interview if it's already cancelled"),
+    SKILLS_LIST_EMPTY("There is no skills in the list of skills"),
+    NO_RECRUITER_AT_ALL("There is no recruiter at all in the list");
 
     private String message;
 

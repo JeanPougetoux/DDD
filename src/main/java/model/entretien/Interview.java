@@ -27,6 +27,12 @@ public class Interview {
 
     Interview(CandidatDTO candidatDTO, ArrayList<RecruiterDTO> recruiterDTO) {
         this.candidate = new Candidate(candidatDTO);
+
+        RecruiterManager recruiterManager = new RecruiterManager(recruiterDTO);
+
+        Recruiter recruiter = recruiterManager.getBestRecruiterFor(this.candidate);
+
+
     }
 
     public InterviewID getId() {

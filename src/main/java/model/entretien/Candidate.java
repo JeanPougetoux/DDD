@@ -1,9 +1,12 @@
 package model.entretien;
 
 import common.dto.CandidatDTO;
-import common.etc.Skills;
+import common.dto.SkillDTO;
+import common.exception.ExceptionMessages;
+import common.exception.SkillsException;
 
 import java.util.HashMap;
+import java.util.Map;
 
 class Candidate {
     private CandidateID id;
@@ -14,10 +17,26 @@ class Candidate {
 
         this.id = new CandidateID(candidatDTO.getId());
         this.name = candidatDTO.getName();
-        this.yearOfExperience = candidatDTO.getYearOfExperience();
+        for (Map.Entry<SkillDTO, Integer> entry : candidatDTO.getYearOfExperience().entrySet()) {
+            yearOfExperience.put(new Skills(entry.getKey().getName()), entry.getValue());
+        }
     }
 
-    public Skills getBestSkill(){
-        
+    public Skills getBestSkill() throws SkillsException {
+        Integer maxYearExperience = -1;
+        Skills maxSkillExperience = null;
+
+        if(yearOfExperience.size() == 0) {
+            throw new SkillsException(ExceptionMessages.SKILLS_LIST_EMPTY);
+        }
+
+        for (Map.Entry<Skills, Integer> entry : yearOfExperience.entrySet()) {
+            if (entry.getValue() > maxYearExperience) {
+                maxYearExperience = entry.getValue();
+                maxSkillExperience = entry.getKey();
+            }
+        }
+
+        return maxSkillExperience;
     }
 }
