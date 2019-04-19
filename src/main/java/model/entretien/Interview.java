@@ -4,7 +4,7 @@ import common.exception.ExceptionMessages;
 import common.exception.InterviewException;
 import common.status.InterviewStatus;
 
-class Interview {
+public class Interview {
     private InterviewID id;
     private InterviewStatus status;
     private Creneau creneau;
@@ -12,6 +12,8 @@ class Interview {
     private Candidate candidate;
 
     Interview(InterviewID id, Creneau creneau, Recruiter recruiter, Candidate candidate) {
+
+
         this.id = id;
         this.creneau = creneau;
         this.recruiter = recruiter;
