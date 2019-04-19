@@ -16,7 +16,7 @@ class RecruiterManager {
     public RecruiterManager(ArrayList<RecruiterDTO> recruitersDTO) {
         for (RecruiterDTO recruiterDTO : recruitersDTO) {
             HashMap<SkillDTO, Integer> skillList = recruiterDTO.getYearOfExperience();
-            recruiters.add(new Recruiter(new RecruiterID(recruiterDTO.getId()), recruiterDTO.getName(),skillList ));
+            recruiters.add(new Recruiter(new RecruiterID(recruiterDTO.getId()), recruiterDTO.getName(),skillList));
         }
     }
 
@@ -31,12 +31,13 @@ class RecruiterManager {
         Recruiter recruiter = getMaxSkilled(recruiters, skill);
 
         if(recruiter == null) {
-
+            if(recruiter.isAvailable(creneau));
         }
         else {
 
         }
     }
+
 
     private Recruiter getMaxSkilled(ArrayList<Recruiter> recruiters, Skills skill) {
         Integer maxExperienceInSkill = -1;

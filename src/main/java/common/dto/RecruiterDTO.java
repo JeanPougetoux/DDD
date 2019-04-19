@@ -15,4 +15,8 @@ public class RecruiterDTO extends ProfilDTO{
     public String getName() {
         return name;
     }
+
+    public ArrayList<InterviewDTO> getInterviews() {
+        return interviews;
+    }
 }
