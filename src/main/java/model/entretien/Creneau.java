@@ -8,12 +8,12 @@ import java.time.LocalTime;
 import java.util.Date;
 import java.util.Objects;
 
-public class Creneau {
+class Creneau {
     private Date date;
     private LocalTime start;
     private LocalTime end;
 
-    public Creneau(Date date, LocalTime start, LocalTime end) {
+    Creneau(Date date, LocalTime start, LocalTime end) {
         if(date == null || start == null || end == null)
             throw new CreneauException(ExceptionMessages.NULL);
 

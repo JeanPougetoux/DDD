@@ -1,4 +1,4 @@
-package vo;
+package model.entretien;
 
 import common.exception.CreneauException;
 import model.entretien.Creneau;

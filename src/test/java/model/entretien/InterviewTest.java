@@ -1,4 +1,4 @@
-package entity;
+package model.entretien;
 
 import common.exception.InterviewException;
 import model.entretien.Candidate;

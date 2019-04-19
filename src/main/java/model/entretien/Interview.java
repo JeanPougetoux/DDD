@@ -4,7 +4,7 @@ import common.exception.ExceptionMessages;
 import common.exception.InterviewException;
 import common.status.InterviewStatus;
 
-public class Interview {
+class Interview {
     private InterviewID id;
     private InterviewStatus status;
     private Creneau creneau;

@@ -2,10 +2,10 @@ package model.entretien;
 
 import java.util.Objects;
 
-public class InterviewID {
+class InterviewID {
     private int id;
 
-    public InterviewID(int id) {
+    InterviewID(int id) {
         this.id = id;
     }
 

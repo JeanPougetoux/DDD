@@ -2,7 +2,7 @@ package model.entretien;
 
 import java.util.Objects;
 
-public class Room {
+class Room {
     private String name;
 
     public Room(String name) {
