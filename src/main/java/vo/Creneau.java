@@ -1,5 +1,8 @@
 package vo;
 
+import utils.CreneauException;
+import utils.ExceptionMessages;
+
 import java.time.Duration;
 import java.time.LocalTime;
 import java.util.Date;
@@ -10,7 +13,7 @@ public class Creneau {
     private LocalTime start;
     private LocalTime end;
 
-    Creneau(Date date, LocalTime start, LocalTime end) {
+    public Creneau(Date date, LocalTime start, LocalTime end) {
         if(date == null || start == null || end == null)
             throw new CreneauException(ExceptionMessages.NULL);
 
