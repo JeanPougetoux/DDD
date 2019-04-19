@@ -1,5 +1,6 @@
 package vo;
 
+import common.exception.CreneauException;
 import model.entretien.Creneau;
 import org.junit.Test;
 import common.exception.ExceptionMessages;

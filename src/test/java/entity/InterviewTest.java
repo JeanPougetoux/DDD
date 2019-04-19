@@ -1,5 +1,6 @@
 package entity;
 
+import common.exception.InterviewException;
 import model.entretien.Candidate;
 import model.entretien.Interview;
 import model.entretien.Recruiter;
