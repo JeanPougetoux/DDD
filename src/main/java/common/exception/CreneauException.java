@@ -1,4 +1,4 @@
-package utils;
+package common.exception;
 
 public class CreneauException extends RuntimeException{
     public CreneauException(ExceptionMessages exceptionMessages) {

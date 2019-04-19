@@ -1,13 +1,13 @@
 package entity;
 
-import data.Candidate;
-import data.Recruiter;
+import model.entretien.Candidate;
+import model.entretien.Interview;
+import model.entretien.Recruiter;
 import org.junit.Test;
-import utils.ExceptionMessages;
-import utils.InterviewException;
-import utils.InterviewStatus;
-import vo.Creneau;
-import vo.InterviewID;
+import common.exception.ExceptionMessages;
+import common.status.InterviewStatus;
+import model.entretien.Creneau;
+import model.entretien.InterviewID;
 
 import java.time.LocalTime;
 import java.util.Date;

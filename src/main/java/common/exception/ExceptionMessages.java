@@ -1,4 +1,4 @@
-package utils;
+package common.exception;
 
 public enum ExceptionMessages {
     DURATION_LIMIT("The creneau should last more than 30 minutes"),

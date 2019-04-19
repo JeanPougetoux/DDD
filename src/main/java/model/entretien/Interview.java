@@ -1,12 +1,8 @@
-package entity;
+package model.entretien;
 
-import data.Candidate;
-import data.Recruiter;
-import utils.ExceptionMessages;
-import utils.InterviewException;
-import utils.InterviewStatus;
-import vo.Creneau;
-import vo.InterviewID;
+import common.exception.ExceptionMessages;
+import common.exception.InterviewException;
+import common.status.InterviewStatus;
 
 public class Interview {
     private InterviewID id;

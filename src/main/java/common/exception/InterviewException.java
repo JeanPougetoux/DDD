@@ -1,4 +1,4 @@
-package utils;
+package common.exception;
 
 public class InterviewException extends RuntimeException{
     public InterviewException(ExceptionMessages exceptionMessages) {

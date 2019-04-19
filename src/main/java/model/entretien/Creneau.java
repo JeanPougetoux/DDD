@@ -1,7 +1,7 @@
-package vo;
+package model.entretien;
 
-import utils.CreneauException;
-import utils.ExceptionMessages;
+import common.exception.CreneauException;
+import common.exception.ExceptionMessages;
 
 import java.time.Duration;
 import java.time.LocalTime;

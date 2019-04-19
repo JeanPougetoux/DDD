@@ -1,4 +1,4 @@
-package vo;
+package model.entretien;
 
 import java.util.Objects;
 

@@ -1,8 +1,8 @@
 package vo;
 
+import model.entretien.Creneau;
 import org.junit.Test;
-import utils.CreneauException;
-import utils.ExceptionMessages;
+import common.exception.ExceptionMessages;
 
 import java.time.LocalTime;
 import java.util.Date;
